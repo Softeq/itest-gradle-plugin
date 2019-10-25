@@ -1,27 +1,16 @@
+---
+title:       itest - Gradle integration tests
+date:        2019-10-23 14:16:00 +0300
+author:      "@drabenia"
+description: itest Gradle plugin allow to apply integration testing for your Java project in simple way
+layout:      default
+---
+
 ## Gradle Integration Testing Plugin
 [![Build Status](https://travis-ci.org/Softeq/itest-gradle-plugin.svg?branch=master)](https://travis-ci.org/Softeq/itest-gradle-plugin)
 [![Coverage Status](https://coveralls.io/repos/github/Softeq/itest-gradle-plugin/badge.svg?branch=master)](https://coveralls.io/github/Softeq/itest-gradle-plugin?branch=master)
 
 There are plugin that allow to configure integration tests same way as unit tests in simple way
-
-## Build
-
-To build the project it is require to execute 
-```bash
-./gradlew clean build 
-```
-
-## Documentation
-
-Content:
-1. [Quick Start](#quick-start)
-2. [Source Set](#source-set)
-3. [Integration Test Task](#integration-test-task)
-    - [JUnit 5](#junit-5)
-    - [TestNG](#testng)
-4. [Dependencies Management](#dependencies-management)
-5. [Skip Tests](#skip-tests)
-6. [Configurable Parameters](#configurable-parameters)
 
 ### Quick Start
 
@@ -45,6 +34,18 @@ To run the tests you just need to execute in your project
 ```bash
 ./gradlew clean build
 ```
+
+## Documentation
+
+Content:
+1. [Quick Start](#quick-start)
+2. [Source Set](#source-set)
+3. [Integration Test Task](#integration-test-task)
+    - [JUnit 5](#junit-5)
+    - [TestNG](#testng)
+4. [Dependencies Management](#dependencies-management)
+5. [Skip Tests](#skip-tests)
+6. [Configurable Parameters](#configurable-parameters)
 
 ### Source Set
 
