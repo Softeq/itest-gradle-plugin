@@ -1,4 +1,6 @@
 ## Gradle Integration Testing Plugin
+[![Build Status](https://travis-ci.org/Softeq/itest-gradle-plugin.svg?branch=master)](https://travis-ci.org/Softeq/itest-gradle-plugin)
+
 There are plugin that allow to configure integration tests same way as unit tests in simple way
 
 ## Build
