@@ -33,7 +33,7 @@ repositories {
 
 dependencies {
     // Use the awesome Spock testing and specification framework
-    testImplementation 'org.spockframework:spock-core:1.3-groovy-2.4'
+    testImplementation 'org.spockframework:spock-core:1.3-groovy-2.5'
 }
 
 gradlePlugin {
