@@ -99,16 +99,16 @@ integration test sources will be at folder with specified name.</p>
 <p>Groovy</p>
 <div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">itestSourceSet</span> <span class="o">{</span>
     <span class="n">name</span> <span class="o">=</span> <span class="s2">"integrationTest"</span>
-    <span class="n">compileClasspath</span> <span class="o">=</span> <span class="n">sourceSets</span><span class="o">.</span><span class="na">main</span><span class="o">.</span><span class="na">output</span> <span class="o">+</span> <span class="n">sourceSets</span><span class="o">.</span><span class="na">main</span><span class="o">.</span><span class="na">buildClasspath</span>
-    <span class="n">runtimeClasspath</span> <span class="o">=</span> <span class="n">sourceSets</span><span class="o">.</span><span class="na">main</span><span class="o">.</span><span class="na">output</span> <span class="o">+</span> <span class="n">sourceSets</span><span class="o">.</span><span class="na">main</span><span class="o">.</span><span class="na">runtimeClasspath</span>
+    <span class="n">compileClasspath</span> <span class="o">=</span> <span class="n">sourceSets</span><span class="o">.</span><span class="na">main</span><span class="o">.</span><span class="na">compileClasspath</span>
+    <span class="n">runtimeClasspath</span> <span class="o">=</span> <span class="n">sourceSets</span><span class="o">.</span><span class="na">main</span><span class="o">.</span><span class="na">runtimeClasspath</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
 <p>Kotlin</p>
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">itestSourceSet</span> <span class="p">{</span>
     <span class="n">name</span> <span class="p">=</span> <span class="s">"integrationTest"</span>
-    <span class="n">compileClasspath</span> <span class="p">=</span> <span class="n">sourceSets</span><span class="p">[</span><span class="s">"main"</span><span class="p">].</span><span class="n">output</span> <span class="p">+</span> <span class="n">sourceSets</span><span class="p">[</span><span class="s">"main"</span><span class="p">].</span><span class="n">compileClasspath</span>
-    <span class="n">runtimeClasspath</span> <span class="p">=</span> <span class="n">sourceSets</span><span class="p">[</span><span class="s">"main"</span><span class="p">].</span><span class="n">output</span> <span class="p">+</span> <span class="n">sourceSets</span><span class="p">[</span><span class="s">"main"</span><span class="p">].</span><span class="n">runtimeClasspath</span>
+    <span class="n">compileClasspath</span> <span class="p">=</span> <span class="n">sourceSets</span><span class="p">[</span><span class="s">"main"</span><span class="p">].</span><span class="n">compileClasspath</span>
+    <span class="n">runtimeClasspath</span> <span class="p">=</span> <span class="n">sourceSets</span><span class="p">[</span><span class="s">"main"</span><span class="p">].</span><span class="n">runtimeClasspath</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
