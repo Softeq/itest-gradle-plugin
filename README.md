@@ -65,8 +65,8 @@ Groovy
 ```groovy
 itestSourceSet {
     name = "integrationTest"
-    compileClasspath = sourceSets.main.output + sourceSets.main.buildClasspath
-    runtimeClasspath = sourceSets.main.output + sourceSets.main.runtimeClasspath
+    compileClasspath = sourceSets.main.buildClasspath
+    runtimeClasspath = sourceSets.main.runtimeClasspath
 }
 ```
 
@@ -74,8 +74,8 @@ Kotlin
 ```kotlin
 itestSourceSet {
     name = "integrationTest"
-    compileClasspath = sourceSets["main"].output + sourceSets["main"].compileClasspath
-    runtimeClasspath = sourceSets["main"].output + sourceSets["main"].runtimeClasspath
+    compileClasspath = sourceSets["main"].compileClasspath
+    runtimeClasspath = sourceSets["main"].runtimeClasspath
 }
 ```
 

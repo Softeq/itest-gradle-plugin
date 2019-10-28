@@ -62,12 +62,21 @@ itestSourceSet {
 
 Also there are possible to customize compile classpath and runtime classpath of the source set
 
-Groovy / Kotlin
+Groovy
 ```groovy
 itestSourceSet {
     name = "integrationTest"
     compileClasspath = sourceSets.main.output + sourceSets.main.buildClasspath
     runtimeClasspath = sourceSets.main.output + sourceSets.main.runtimeClasspath
+}
+```
+
+Kotlin 
+```kotlin
+itestSourceSet {
+    name = "integrationTest"
+    compileClasspath = sourceSets["main"].output + sourceSets["main"].compileClasspath
+    runtimeClasspath = sourceSets["main"].output + sourceSets["main"].runtimeClasspath
 }
 ```
 
@@ -80,9 +89,16 @@ Configuration parameters for this task you may find
 #### JUnit 5
 To add support of JUnit 5 you will require to specify at configuration task 
 
-Groovy / Kotlin
+Groovy
 ```groovy
 integrationTask {
+    useJUnitPlatform()
+}
+```
+
+Kotlin 
+```kotlin
+tasks.withType<Test> {
     useJUnitPlatform()
 }
 ```
@@ -91,9 +107,16 @@ integrationTask {
 To use TestNG for integration testing of you application it will require to specify next configuration for the
 `integrationTest` task
 
-Groovy / Kotlin
+Groovy
 ```groovy
 integrationTest {
+    useTestNG()
+}
+```
+
+Kotlin 
+```kotlin
+tasks.withType<Test> {
     useTestNG()
 }
 ```
