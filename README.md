@@ -106,7 +106,7 @@ tasks.withType<Test> {
 To use TestNG for integration testing of you application it will require to specify next configuration for the
 `integrationTest` task
 
-Groovy / Kotlin
+Groovy
 ```groovy
 integrationTest {
     useTestNG()
