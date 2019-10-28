@@ -65,7 +65,7 @@ Groovy
 ```groovy
 itestSourceSet {
     name = "integrationTest"
-    compileClasspath = sourceSets.main.buildClasspath
+    compileClasspath = sourceSets.main.compileClasspath
     runtimeClasspath = sourceSets.main.runtimeClasspath
 }
 ```
