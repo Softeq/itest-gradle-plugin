@@ -5,14 +5,15 @@ plugins {
     id 'jacoco'
     id 'maven-publish'
     id 'com.github.kt3k.coveralls' version '2.8.4'
+    id 'com.gradle.plugin-publish' version '0.10.0'
 }
 
 publishing {
     publications {
         pluginMaven(MavenPublication) {
             groupId = 'com.softeq.gradle.itest'
-            artifactId = 'com.softeq.gradle.itest.gradle.plugin'
-            version = '1.0'
+            artifactId = 'itest.gradle.plugin'
+            version = '1.0.2'
         }
     }
 }
@@ -25,11 +26,23 @@ dependencies {
     testImplementation 'org.spockframework:spock-core:1.3-groovy-2.5'
 }
 
+pluginBundle {
+    website = 'https://softeq.github.io/itest-gradle-plugin/'
+    vcsUrl = 'https://github.com/Softeq/itest-gradle-plugin'
+    tags = ['integration', 'integration-testing', 'testing', 'junit5', 'testng', 'e2e', 'functional-testing']
+}
+
 gradlePlugin {
     plugins {
         itest {
             id = 'com.softeq.gradle.itest'
+            displayName = 'itest'
+            description = """
+                Integration testing plugin for the Gradle. It allow in simple way to add and execute integration 
+                tests in the Java project.
+            """
             implementationClass = 'com.softeq.gradle.itest.ItestPlugin'
+            version = '1.0.2'
         }
     }
 }

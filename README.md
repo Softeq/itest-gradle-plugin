@@ -28,14 +28,14 @@ Content:
 To add ***itest*** plugin to your project it will require to add next code to the `build.gradle`
 ```groovy
 plugins {
-    id 'com.softeq.gradle.itest' version '1.0'
+    id 'com.softeq.gradle.itest' version '1.0.2'
 }
 ```
 
 Or with Kotlin
 ```kotlin
 plugins {
-  id("com.softeq.gradle.itest", version = "1.0") 
+  id("com.softeq.gradle.itest") version "1.0.2" 
 }
 ```
 
@@ -61,12 +61,21 @@ itestSourceSet {
 
 Also there are possible to customize compile classpath and runtime classpath of the source set
 
-Groovy / Kotlin
+Groovy
 ```groovy
 itestSourceSet {
     name = "integrationTest"
     compileClasspath = sourceSets.main.output + sourceSets.main.buildClasspath
     runtimeClasspath = sourceSets.main.output + sourceSets.main.runtimeClasspath
+}
+```
+
+Kotlin 
+```kotlin
+itestSourceSet {
+    name = "integrationTest"
+    compileClasspath = sourceSets["main"].output + sourceSets["main"].compileClasspath
+    runtimeClasspath = sourceSets["main"].output + sourceSets["main"].runtimeClasspath
 }
 ```
 
@@ -79,9 +88,16 @@ Configuration parameters for this task you may find
 #### JUnit 5
 To add support of JUnit 5 you will require to specify at configuration task 
 
-Groovy / Kotlin
+Groovy
 ```groovy
 integrationTask {
+    useJUnitPlatform()
+}
+```
+
+Kotlin 
+```kotlin
+tasks.withType<Test> {
     useJUnitPlatform()
 }
 ```
@@ -93,6 +109,13 @@ To use TestNG for integration testing of you application it will require to spec
 Groovy / Kotlin
 ```groovy
 integrationTest {
+    useTestNG()
+}
+```
+
+Kotlin 
+```kotlin
+tasks.withType<Test> {
     useTestNG()
 }
 ```
