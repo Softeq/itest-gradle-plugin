@@ -8,6 +8,8 @@ plugins {
     id 'com.gradle.plugin-publish' version '0.10.0'
 }
 
+sourceCompatibility = '8'
+
 publishing {
     publications {
         pluginMaven(MavenPublication) {
