@@ -18,17 +18,21 @@ class SourceSetConfigurer implements Configurer {
         def sourceSets = project.sourceSets
 
         if (extension.isCustomDefinedName()) {
-            def itest = sourceSets.itest
-
-            sourceSets.create(extension.name, {
-                compileClasspath += itest.compileClasspath
-                runtimeClasspath += itest.runtimeClasspath
-            })
+            createCustomSourceSet(sourceSets)
         }
 
         def curSet = sourceSets[extension.name]
         curSet.compileClasspath += extension.retrieveCompileClasspath(sourceSets)
         curSet.runtimeClasspath += extension.retrieveRuntimeClasspath(sourceSets)
+    }
+
+    private void createCustomSourceSet(sourceSets) {
+        def itest = sourceSets.itest
+
+        sourceSets.create(extension.name, {
+            compileClasspath += itest.compileClasspath
+            runtimeClasspath += itest.runtimeClasspath
+        })
     }
 
 }
