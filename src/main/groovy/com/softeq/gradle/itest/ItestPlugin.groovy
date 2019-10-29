@@ -10,6 +10,8 @@ class ItestPlugin implements Plugin<Project> {
     void apply(Project project) {
         def extension = project.extensions.create('itestSourceSet', ItestSourceSetExtension)
 
+        project.sourceSets.create('itest')
+
         project.configurations {
             itestImplementation.extendsFrom implementation
             itestRuntimeOnly.extendsFrom runtimeOnly

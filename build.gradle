@@ -13,7 +13,7 @@ publishing {
         pluginMaven(MavenPublication) {
             groupId = 'com.softeq.gradle.itest'
             artifactId = 'itest.gradle.plugin'
-            version = '1.0.2'
+            version = '1.0.3'
         }
     }
 }
@@ -38,11 +38,11 @@ gradlePlugin {
             id = 'com.softeq.gradle.itest'
             displayName = 'itest'
             description = """
-                Integration testing plugin for the Gradle. It allow in simple way to add and execute integration 
-                tests in the Java project.
+                Integration testing plugin for the Gradle. It allow in simple way to add and execute 
+                integration tests in the Java project.
             """
             implementationClass = 'com.softeq.gradle.itest.ItestPlugin'
-            version = '1.0.2'
+            version = '1.0.3'
         }
     }
 }

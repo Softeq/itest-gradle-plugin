@@ -12,4 +12,8 @@ class ItestSourceSetExtension {
     def retrieveRuntimeClasspath(sourceSets) {
         return runtimeClasspath ?: sourceSets.main.output + sourceSets.main.runtimeClasspath
     }
+
+    def isCustomDefinedName() {
+        name != 'itest'
+    }
 }

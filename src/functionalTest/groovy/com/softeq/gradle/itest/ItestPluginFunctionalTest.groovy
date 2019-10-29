@@ -38,4 +38,38 @@ class ItestPluginFunctionalTest extends Specification {
         result.output.contains('BUILD SUCCESS')
     }
 
+    def "can run task with custom folder"() {
+        given:
+        def projectDir = new File("build/functionalTest")
+        projectDir.deleteDir()
+        projectDir.mkdirs()
+        new File(projectDir, "settings.gradle") << ""
+        new File(projectDir, "build.gradle") << """
+            plugins {
+                id 'java'
+                id 'com.softeq.gradle.itest'
+            }
+            
+            itestSourceSet {
+                name = 'integration'
+            }
+            
+            dependencies {
+                itestImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+                itestRuntimeOnly 'com.h2database:h2:1.0.60'
+            }
+        """
+
+        when:
+        def runner = GradleRunner.create()
+        runner.forwardOutput()
+        runner.withPluginClasspath()
+        runner.withArguments('integrationTest')
+        runner.withProjectDir(projectDir)
+        def result = runner.build()
+
+        then:
+        result.output.contains('BUILD SUCCESS')
+    }
+
 }
