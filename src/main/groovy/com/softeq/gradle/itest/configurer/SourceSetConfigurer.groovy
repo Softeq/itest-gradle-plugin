@@ -21,9 +21,10 @@ class SourceSetConfigurer implements Configurer {
             createCustomSourceSet(sourceSets)
         }
 
-        def curSet = sourceSets[extension.name]
-        curSet.compileClasspath += extension.retrieveCompileClasspath(sourceSets)
-        curSet.runtimeClasspath += extension.retrieveRuntimeClasspath(sourceSets)
+        sourceSets[extension.name].with {
+            compileClasspath += extension.retrieveCompileClasspath(sourceSets)
+            runtimeClasspath += extension.retrieveRuntimeClasspath(sourceSets)
+        }
     }
 
     private void createCustomSourceSet(sourceSets) {
