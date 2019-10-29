@@ -18,14 +18,14 @@ There are plugin that allow to configure integration tests same way as unit test
 To add ***itest*** plugin to your project it will require to add next code to the `build.gradle`
 ```groovy
 plugins {
-    id 'com.softeq.gradle.itest' version '1.0.2'
+    id 'com.softeq.gradle.itest' version '1.0.3'
 }
 ```
 
 Or with Kotlin
 ```kotlin
 plugins {
-  id("com.softeq.gradle.itest") version "1.0.2" 
+  id("com.softeq.gradle.itest") version "1.0.3" 
 }
 ```
 
