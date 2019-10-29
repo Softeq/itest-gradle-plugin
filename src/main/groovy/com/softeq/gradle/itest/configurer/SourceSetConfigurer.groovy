@@ -16,6 +16,7 @@ class SourceSetConfigurer implements Configurer {
     @Override
     void onProjectAfter() {
         def sourceSets = project.sourceSets
+        !sourceSets.hasProperty('itest') && sourceSets.create('itest', {})
 
         if (extension.isCustomDefinedName()) {
             createCustomSourceSet(sourceSets)

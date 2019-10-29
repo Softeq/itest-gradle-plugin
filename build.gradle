@@ -15,7 +15,7 @@ publishing {
         pluginMaven(MavenPublication) {
             groupId = 'com.softeq.gradle.itest'
             artifactId = 'itest.gradle.plugin'
-            version = '1.0.3'
+            version = '1.0.4'
         }
     }
 }
@@ -44,7 +44,7 @@ gradlePlugin {
                 integration tests in the Java project.
             """
             implementationClass = 'com.softeq.gradle.itest.ItestPlugin'
-            version = '1.0.3'
+            version = '1.0.4'
         }
     }
 }
