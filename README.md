@@ -29,14 +29,14 @@ Content:
 To add ***itest*** plugin to your project it will require to add next code to the `build.gradle`
 ```groovy
 plugins {
-    id 'com.softeq.gradle.itest' version '1.0.3'
+    id 'com.softeq.gradle.itest' version '1.0.4'
 }
 ```
 
 Or with Kotlin
 ```kotlin
 plugins {
-  id("com.softeq.gradle.itest") version "1.0.3" 
+  id("com.softeq.gradle.itest") version "1.0.4" 
 }
 ```
 
