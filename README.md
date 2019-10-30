@@ -159,7 +159,7 @@ gradlew clean build -PdisableIntegrationTests
 Alternative options to disable integration and unit tests you can find below
 
 ```bash
-gradlew clena build -x test -x integrationTest
+gradlew clean build -x test -x integrationTest
 ```
 
 ### Configurable Parameters
