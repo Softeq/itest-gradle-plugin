@@ -20,6 +20,7 @@ Content:
 3. [Integration Test Task](#integration-test-task)
     - [JUnit 5](#junit-5)
     - [TestNG](#testng)
+    - [Spock](#spock)
 4. [Dependencies Management](#dependencies-management)
 5. [Skip Tests](#skip-tests)
 6. [Configurable Parameters](#configurable-parameters)
@@ -118,6 +119,17 @@ Kotlin
 ```kotlin
 tasks.withType<Test> {
     useTestNG()
+}
+```
+
+#### Spock
+
+To use Spock framework with the plugin it will require just to add the Spock dependencies
+
+Groovy / Kotlin
+```kotlin
+dependencies {
+    itestImplementation("org.spockframework:spock-core:1.3-groovy-2.5")
 }
 ```
 

@@ -122,6 +122,17 @@ tasks.withType<Test> {
 }
 ```
 
+#### Spock
+
+To use Spock framework with the plugin it will require just to add the Spock dependencies
+
+Groovy / Kotlin
+```kotlin
+dependencies {
+    itestImplementation("org.spockframework:spock-core:1.3-groovy-2.5")
+}
+```
+
 ### Dependencies Management
 
 There are possible to specify additional dependencies for the integration test classes
