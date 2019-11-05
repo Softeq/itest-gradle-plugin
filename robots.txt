@@ -1,0 +1,1 @@
+Sitemap: https://softeq.github.io/itest-gradle-plugin/sitemap.xml
