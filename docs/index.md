@@ -44,6 +44,7 @@ Content:
 3. [Integration Test Task](#integration-test-task)
     - [JUnit 5](#junit-5)
     - [TestNG](#testng)
+    - [TestNG](#spock)
 4. [Dependencies Management](#dependencies-management)
 5. [Skip Tests](#skip-tests)
 6. [Configurable Parameters](#configurable-parameters)
