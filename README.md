@@ -92,7 +92,7 @@ To add support of JUnit 5 you will require to specify at configuration task
 
 Groovy
 ```groovy
-integrationTask {
+integrationTest {
     useJUnitPlatform()
 }
 ```
